@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Business Card</title>
+    <style>
+        /* General Reset */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        /* Business Card */
+        .business-card {
+            width: 750px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            padding: 60px;
+            box-sizing: border-box;
+        }
+
+        /* Left Section */
+        .left-section {
+            width: 35%;
+            text-align: center;
+            padding-right: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+           
+        }
+
+        .person-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .person-title {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Right Section */
+        .right-section {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .company-logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: auto;
+        }
+
+        .company-name {
+            font-size: 1rem;
+            font-weight: bold;
+            color:rgb(0, 0, 0);
+            margin-bottom: 15px;
+            margin-top: 15px
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-info p {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            font-size: 1rem;
+            color: #007bff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 768px) {
+            .business-card {
+                flex-direction: column;
+                width: 90%;
+                padding: 15px;
+            }
+
+            .left-section {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            .right-section {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .company-logo {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin: 0 auto 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .person-name {
+                font-size: 1rem;
+            }
+
+            .company-name {
+                text-align: center;
+            }
+
+            .contact-info {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="business-card">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="assets/WhatsApp Image 2024-12-15 at 10.35.37_16657663.jpg" alt="Profile Photo" class="profile-photo">
+            <div class="person-name">Suliman Mohamed Al Zabin</div>
+            <div class="person-title">CEO</div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <!-- Company Logo -->
+            <img src="assets/logo.png" alt="Company Logo" class="company-logo">
+
+            <!-- Company Name -->
+            <div class="company-name">Al-Zabin & Al-Dakheel Allah Transports Co.</div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Riyadh 14266, Saudi Arabia</p>
+                <p><i class="fas fa-phone"></i> +966 55 616 6111</p>
+                <p><i class="fas fa-phone-alt"></i> +966 11 471 1126</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:s.alzabin@zdco.com.sa">s.alzabin@zdco.com.sa</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
